@@ -10,7 +10,7 @@
  *
  * @wordpress-plugin
  * Plugin Name: Logged In Only
- * Plugin URI:  http://github.com/barryceelen/logged-in-only
+ * Plugin URI:  http://github.com/barryceelen/wp-logged-in-only
  * Description: Display site to logged in users only.
  * Version:     0.0.1
  * Author:      Barry Ceelen
