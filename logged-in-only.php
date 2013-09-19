@@ -15,10 +15,8 @@
  * Version:     0.0.1
  * Author:      Barry Ceelen
  * Author URI:  http://github.com/barryceelen
- * Text Domain: logged-in-only
  * License:     GPL-2.0+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
- * Domain Path: /lang
  */
 
 /*  Copyright 2013  Barry Ceelen  (email : b@multipop.org)
@@ -40,7 +38,8 @@
 add_action( 'init', 'logged_in_only_init' );
 
 function logged_in_only_init() {
-	if ( 'wp-login.php' != $GLOBALS['pagenow'] && ! is_user_logged_in() ) {
+	global $pagenow;
+	if ( ! is_user_logged_in() && 'wp-login.php' != $pagenow ) {
 		die();
 	}
 }
