@@ -3,7 +3,7 @@
  * Logged In Only
  *
  * @package   LoggedInOnly
- * @author    Barry Ceelen <b@multipop.org>
+ * @author    Barry Ceelen <b@rryceelen.com>
  * @license   GPL-2.0+
  * @link      http://github.com/barryceelen
  * @copyright 2013 Barry Ceelen
@@ -19,7 +19,7 @@
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  */
 
-/*  Copyright 2013  Barry Ceelen  (email : b@multipop.org)
+/*  Copyright 2013  Barry Ceelen  (email : b@rryceelen.com)
 
 	This program is free software; you can redistribute it and/or modify
 	it under the terms of the GNU General Public License, version 2, as
