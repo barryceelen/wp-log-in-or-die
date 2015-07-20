@@ -9,7 +9,7 @@
  * @copyright 2013 Barry Ceelen
  *
  * @wordpress-plugin
- * Plugin Name: Logged In Only
+ * Plugin Name: Log in or die();
  * Plugin URI:  https://github.com/barryceelen/wp-login-or-die
  * Description: Display site to logged in users only.
  * Version:     0.0.3
