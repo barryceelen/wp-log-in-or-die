@@ -1,18 +1,18 @@
 <?php
 /**
- * Logged In Only
+ * Log In Or Die!
  *
- * @package   LoggedInOnly
+ * @package   LogInOrDie
  * @author    Barry Ceelen <b@rryceelen.com>
  * @license   GPL-2.0+
- * @link      http://github.com/barryceelen
+ * @link      https://github.com/barryceelen/wp-login-or-die
  * @copyright 2013 Barry Ceelen
  *
  * @wordpress-plugin
  * Plugin Name: Logged In Only
- * Plugin URI:  http://github.com/barryceelen/wp-logged-in-only
+ * Plugin URI:  https://github.com/barryceelen/wp-login-or-die
  * Description: Display site to logged in users only.
- * Version:     0.0.2
+ * Version:     0.0.3
  * Author:      Barry Ceelen
  * Author URI:  http://github.com/barryceelen
  * License:     GPL-2.0+
@@ -35,15 +35,15 @@
 	Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-add_action( 'init', 'logged_in_only_init' );
-add_filter( 'site_transient_update_plugins', 'logged_in_only_remove_update_nag' );
+add_action( 'init', 'log_in_or_die_init' );
+add_filter( 'site_transient_update_plugins', 'log_in_or_die_remove_update_nag' );
 
 /**
  * Die if the user is not logged in and not viewing the login page.
  *
  * @since 0.0.1
  */
-function logged_in_only_init() {
+function log_in_or_die_init() {
 	global $pagenow;
 	if ( ! is_user_logged_in() && 'wp-login.php' != $pagenow ) {
 		die();
@@ -57,7 +57,7 @@ function logged_in_only_init() {
  *
  * @since 0.0.2
  */
-function logged_in_only_remove_update_nag( $value ) {
+function log_in_or_die_remove_update_nag( $value ) {
 	if ( isset( $value->response[ plugin_basename( __FILE__ ) ] ) && ! empty( $value->response[ plugin_basename( __FILE__ ) ] ) ) {
 		unset( $value->response[ plugin_basename( __FILE__ ) ] );
 	}
